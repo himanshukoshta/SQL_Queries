@@ -1,0 +1,37 @@
+CREATE DATABASE XYZ_info;
+USE XYZ_info;
+
+CREATE TABLE INFO(
+   emp_id INT PRIMARY KEY,
+   name VARCHAR(50),
+   email VARCHAR(50),
+   city VARCHAR(50),
+   dept VARCHAR(50)
+);
+
+INSERT INTO INFO VALUES
+(1, 'Amit', 'amit.sharma@gmail.com', 'Jaipur', 'IT'),
+(2, 'Sneha', 'sneha_k@yahoo.com', 'Indore', 'HR'),
+(3, 'Rahul', 'rahul.verma@gmail.com', 'Bhopal', 'Finance'),
+(4, 'Anita', 'anita99@gmail.com', 'Nagpur', 'IT'),
+(5, 'Suman', 'suman@outlook.com', 'Kanpur', 'Sales'),
+(6, 'Rohan', 'rohan_singh@yahoo.com', 'Delhi', 'IT'),
+(7, 'Kiran', 'kiran@gmail.com', 'Udaipur', 'HR'),
+(8, 'Arjun', 'arjun.mehta@gmail.com', 'Jodhpur', 'Finance'),
+(9, 'Neha', 'neha@company.in', 'Raipur', 'IT'),
+(10, 'Aman', 'aman@startup.in', 'Manipal', 'IT'),
+(11, 'sonal', 'sonal@gmail.com', 'Bangalore', 'Sales'),
+(12, 'Varun', 'varun@yahoo.com', 'Chandigarh', 'HR'),
+(13, 'Asha', 'asha.patel@gmail.com', 'Ahmedabad', 'Finance'),
+(14, 'Nitin', 'nitin@company.com', 'Nagpur', 'IT'),
+(15, 'Alka', 'alka@domain.in', 'Ujjain', 'Sales');
+
+SELECT * FROM INFO;
+SELECT * FROM INFO WHERE name REGEXP '^[^aeiouAEIOU]';
+SELECT * FROM INFO WHERE email LIKE '%.com' 
+AND email NOT LIKE '%@gmail.com';
+SELECT * FROM INFO WHERE name LIKE 'A%';
+SELECT * FROM INFO WHERE city LIKE '%r';
+SELECT * FROM INFO WHERE email LIKE '%gmail%';
+SELECT * FROM INFO WHERE name LIKE '%an%';
+SELECT * FROM INFO WHERE dept LIKE 'F%';
